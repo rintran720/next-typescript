@@ -46,12 +46,20 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
+    "@commitlint/config-conventional": "^17.2.0",
+    "commitlint": "^17.2.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "module-resolver": "^1.0.0",
     "openapi-typescript-codegen": "^0.23.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "sass": "^1.57.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "yarn lint",
+      "yarn format"
+    ]
   }
 }
