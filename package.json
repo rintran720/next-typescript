@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
-    "prestart": "rimraf ./next",
+    "prestart": "rimraf ./next && yarn build",
     "start": "next start -p 8081",
-    "lint": "next lint",
+    "lint": "eslint --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json,scss}' --config ./.prettierrc",
     "gen-api": "openapi --input ./src/api/swagger/openapi.json --output ./src/api/swagger --client axios"
   },
