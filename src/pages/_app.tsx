@@ -6,15 +6,19 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from '~/store/config';
 import theme from '~/theme/config';
 import ThemeProvider from '~/theme/ThemeProvider';
+import AppHead from '~/components/AppHead';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </PersistGate>
-    </Provider>
+    <>
+      <AppHead />
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </PersistGate>
+      </Provider>
+    </>
   );
 }
