@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const withPWA = require('next-pwa')({
   dest: 'public',
 });
@@ -9,6 +11,9 @@ const nextConfig = withPWA({
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src/styles')],
   },
 });
 

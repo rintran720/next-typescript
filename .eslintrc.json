@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals","plugin:@typescript-eslint/recommended"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "warn",
+    "spaced-comment": "error",
+    "no-duplicate-imports": "error"
+  },
+  "ignorePatterns": ["webpack.config.js", "**/vendor/*.js", "**/openapi.json", "src/assets/**", "**/*.scss"]
 }

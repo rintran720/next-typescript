@@ -9,7 +9,7 @@
     "start": "next start -p 8081",
     "lint": "eslint --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json,scss}' --config ./.prettierrc",
-    "gen-api": "openapi --input ./src/api/swagger/openapi.json --output ./src/api/swagger --client axios"
+    "gen-api:pet": "openapi --input ./src/api/petstore/openapi.json --output ./src/api/petstore --name PetStoreServer --client axios  --indent 2"
   },
   "author": {
     "name": "John Smith",
@@ -49,13 +49,14 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^17.2.0",
     "commitlint": "^17.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "module-resolver": "^1.0.0",
     "openapi-typescript-codegen": "^0.23.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.57.0"
+    "sass": "^1.57.1"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [

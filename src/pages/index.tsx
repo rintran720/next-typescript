@@ -8,7 +8,7 @@ export default function Home() {
         <title>My page title</title>
         <meta name='description' content='This is SEOful web app' />
       </Head>
-      <HomeComponent />;
+      <HomeComponent />
     </>
   );
 }
