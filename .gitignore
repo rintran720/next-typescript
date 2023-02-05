@@ -15,7 +15,9 @@
 # production
 /build
 public/sw.js
+public/sw.js.map
 public/workbox-*.js
+public/workbox-*.js.map
 
 # misc
 .DS_Store
@@ -36,8 +38,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# build
-public/sw.js
-public/sw.js.map
-public/workbox-*
